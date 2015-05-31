@@ -5,7 +5,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,11 +22,11 @@ public class SearchTest {
     @BeforeClass
     public static void before() {
         // driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "/Users/kaveesh/Desktop/Interview Stuff/chromedriver.exe");
-        driver = new ChromeDriver();
+      //  System.setProperty("webdriver.chrome.driver", "/Users/kaveesh/Desktop/Interview Stuff/chromedriver.exe");
+        driver = new FirefoxDriver();
         driver.get("https://www.oliversweeney.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterClass
